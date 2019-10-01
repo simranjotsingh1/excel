@@ -1,0 +1,28 @@
+Private Sub CommandButton1_Click()
+Worksheets(1).Range("A1:A10").Value = "Hello world!!"
+
+'Add color to the backgropund of cells A1:A10'
+
+Worksheets(1).Range("A1:A10").Interior.Color = RGB(170, 12, 100)
+
+Worksheets(1).Range("A1:A10").Font.Color = RGB(255, 0, 35)
+
+Worksheets(1).Range("A1:A10").Borders.Color = RGB(255, 0, 0)
+Worksheets(1).Range("A1:A10").HorizontalAlignment = -4108
+
+#for loop
+For i = 1 To 10
+
+c = "A" & i
+
+Worksheets(1).Range(c).Value = i
+
+Next i
+ = WorksheetFunction.Sum(Worksheets(1).Range("A1:A40"))
+
+Worksheets(1).Range("C20").Value = x
+
+'Fill in cells A50:A60 and B50:B60 with randoms number
+Worksheets(1).Range("A50:A60,B50:B60").Formula = "=Randbetween(0,100)"
+
+End Sub
